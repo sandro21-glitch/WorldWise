@@ -13,12 +13,12 @@ const Home = lazy(() => import("./pages/Home"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const Product = lazy(() => import("./pages/Product"));
 const AppLayout = lazy(() => import("./pages/AppLayout"));
-const Loading = lazy(() => import("./components/Loading"));
+const Spinner = lazy(() => import("./components/Spinner"));
 
 const App = () => {
   return (
     <Router>
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Spinner />}>
         <Routes>
           <Route index element={<Home />} />
           <Route path="pricing" element={<Pricing />} />
